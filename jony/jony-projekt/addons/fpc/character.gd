@@ -204,6 +204,19 @@ func _physics_process(delta): # Most things happen here.
 
 #endregion
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		shoot()
+
+func shoot():
+	if %RayCast3D.is_colliding():
+		print("colliding")
+		var collider : Node3D = %RayCast3D.get_collider()
+		print("here")
+		if collider and collider.get_parent() and collider.get_parent().has_method("interact"):
+			print("interact")
+			collider.get_parent().interact()
+
 #region Input Handling
 
 func handle_jumping():
