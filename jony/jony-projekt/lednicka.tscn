@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cyvvrt71sf326"]
+[gd_scene load_steps=2 format=3 uid="uid://cyvvrt71sf326"]
+
+[ext_resource type="Material" uid="uid://dw8koeasl81fd" path="res://materialy/strop.tres" id="1_3wjjg"]
 
 [node name="Lednicka" type="CSGBox3D"]
 cast_shadow = 0
@@ -16,45 +18,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30397773, -0.52076817, -0.
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.75618696, 1.2566215, 0.0484176)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D76" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30397773, 0.38163376, -0.10793187)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.75618696, 0.45185068, 0.0484176)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D77" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27526802, 0.13988972, -0.46735215)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.79940295, 0.073915035, 0.62376845)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D78" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27550444, -1.2048035, -0.46210313)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.7999067, 0.06824023, 0.6342665)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D79" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2842935, 0.63001966, -0.46280235)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.8174848, 0.06824023, 0.6328681)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D51" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25022435, -0.37865877, -0.82267654)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.86070967, 2.0843437, 0.088431716)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D74" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.07040065, 0, -0.9975188, 0, 1, 0, 0.9975188, 0, -0.07040065, -0.64377517, -0.37865877, -0.70174325)
 cast_shadow = 0
 use_collision = true
 size = Vector3(1.1031779, 2.0843437, 0.088431716)
+material = ExtResource("1_3wjjg")
 
 [node name="CSGBox3D75" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.07040065, 0, -0.9975188, 0, 1, 0, 0.9975188, 0, -0.07040065, 0.13096642, -0.37865877, -0.70174325)
 cast_shadow = 0
 use_collision = true
 size = Vector3(1.1031779, 2.0843437, 0.088431716)
+material = ExtResource("1_3wjjg")
