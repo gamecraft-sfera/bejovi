@@ -422,6 +422,12 @@ libraries = {
 }
 speed_scale = 4.0
 
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09494436, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 16
+
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15

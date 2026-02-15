@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://476ueea56vp4"]
+
+[ext_resource type="Script" uid="uid://cik88yknrseia" path="res://interaktiv.gd" id="1_pce36"]
+
+[sub_resource type="Animation" id="Animation_10xv0"]
+resource_name = "dveře"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.48, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.6747091, 1.5256392, -0.2295866), Vector3(0.6747091, 2.8522372, -0.2295866), Vector3(0.6747091, 0.41278076, -0.2295866)]
+}
+
+[sub_resource type="Animation" id="Animation_qmfg1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.6747091, 1.5256392, -0.2295866)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jchie"]
+_data = {
+&"RESET": SubResource("Animation_qmfg1"),
+&"dveře": SubResource("Animation_10xv0")
+}
+
+[node name="interaktiv" type="Node3D"]
+script = ExtResource("1_pce36")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6747091, 1.5256392, -0.2295866)
+use_collision = true
+collision_layer = 17
+collision_mask = 17
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jchie")
+}
