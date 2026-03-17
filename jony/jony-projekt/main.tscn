@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://4faa3vb4kgmr"]
+[gd_scene load_steps=43 format=3 uid="uid://4faa3vb4kgmr"]
 
 [ext_resource type="PackedScene" uid="uid://dnk4anfjmd8mu" path="res://skrinka.tscn" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://beaj6tejvg31f" path="res://textury/podlaha/ParquetFlooring04_4K_BaseColor.png" id="1_2cqfq"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://slspw0yrqnh3" path="res://plysaci/Meshy_AI_Patchwork_Bat_Puppet_0215191020_texture.fbx" id="19_cegan"]
 [ext_resource type="PackedScene" uid="uid://yy5ym42dni2m" path="res://plysaci/Meshy_AI_Animation_Walking_withSkin.fbx" id="20_82xsv"]
 [ext_resource type="PackedScene" uid="uid://giivjwuig4f2" path="res://Cat_v1_L3.123cb1b1943a-2f48-4e44-8f71-6bbe19a3ab64/cat.glb" id="21_getpj"]
+[ext_resource type="Texture2D" uid="uid://d22i0ybu1suyh" path="res://telefon.png" id="23_d13ii"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d13ii"]
 shader = ExtResource("1_ryguw")
@@ -85,6 +86,187 @@ roughness_texture = ExtResource("11_vivmo")
 normal_enabled = true
 normal_texture = ExtResource("10_w48qg")
 uv1_triplanar = true
+
+[sub_resource type="Animation" id="Animation_d13ii"]
+resource_name = "telefon"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Telefon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.7, 1.1333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-368.99997, 402), Vector2(55.99997, 353), Vector2(124.99999, 353), Vector2(246.5, 336.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Telefon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.6666667, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Telefon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.23046868, 0.8011049), Vector2(0.23046869, 0.8011049), Vector2(0.9277344, 0.84668505)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Telefon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.7, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("23_d13ii"), ExtResource("23_d13ii"), ExtResource("23_d13ii"), ExtResource("23_d13ii")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Telefon:region_enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.03, 2.37, 3.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Telefon:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Telefon:script")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.03, 2.37, 3.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [null, null, null]
+}
+
+[sub_resource type="Animation" id="Animation_1u8w0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Telefon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-224.99995, 715)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Telefon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Telefon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9375, 0.69337004)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Telefon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("23_d13ii")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Telefon:region_enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Telefon:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Telefon:script")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0odxb"]
+_data = {
+&"RESET": SubResource("Animation_1u8w0"),
+&"telefon": SubResource("Animation_d13ii")
+}
 
 [node name="Node3D" type="Node3D"]
 
@@ -369,10 +551,10 @@ use_collision = true
 size = Vector3(0.13022467, 1.082517, 0.12525837)
 
 [node name="CSGBox3D47" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2595634, 4.3318157, 7.2268257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.704973, 4.3318157, 7.2268257)
 cast_shadow = 0
 use_collision = true
-size = Vector3(3.460548, 1.3602245, 0.073664635)
+size = Vector3(2.3513677, 1.3602245, 0.073664635)
 material = ExtResource("5_cegan")
 
 [node name="CSGBox3D75" type="CSGBox3D" parent="."]
@@ -425,10 +607,10 @@ size = Vector3(0.70852077, 0.034453094, 1.1504434)
 material = SubResource("StandardMaterial3D_ryguw")
 
 [node name="CSGBox3D52" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2595634, 3.5335476, 7.2268257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.658037, 3.5335476, 7.2268257)
 cast_shadow = 0
 use_collision = true
-size = Vector3(3.460548, 0.26302975, 0.073664635)
+size = Vector3(2.2574956, 0.26302975, 0.073664635)
 material = ExtResource("5_cegan")
 
 [node name="CSGBox3D50" type="CSGBox3D" parent="."]
@@ -934,11 +1116,11 @@ use_collision = true
 size = Vector3(0.2166565, 0.5930772, 0.20430547)
 
 [node name="CSGBox3D41" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6562729, 7.0942564, 2.63382)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7570639, 6.7923822, 1.9502587)
 material_override = ExtResource("15_82xsv")
 cast_shadow = 0
 use_collision = true
-size = Vector3(8.247461, 0.2928772, 19.207996)
+size = Vector3(8.39375, 0.2928772, 18.54687)
 
 [node name="CSGBox3D73" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.923176, 4.6304, -5.740881)
@@ -979,11 +1161,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6212063, 3.2732449, 4.27242
 light_energy = 2.564
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3331864, 6.0629826, 9.903222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9138043, 6.355845, 10.265382)
 light_energy = 2.564
 
 [node name="OmniLight3D12" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0090405, 6.0629826, 9.903222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0090405, 6.4321404, 9.903222)
 light_energy = 2.564
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="."]
@@ -993,7 +1175,11 @@ omni_range = 0.388
 omni_attenuation = -0.705
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7784195, 6.4919953, -0.0015335083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5917947, 5.4270415, -0.5477501)
+light_energy = 2.564
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8583167, 5.4270415, -0.5477501)
 light_energy = 2.564
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="."]
@@ -1033,4 +1219,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629602, 4.181864, 5.536608
 visible = false
 
 [node name="cat" parent="." instance=ExtResource("21_getpj")]
-transform = Transform3D(0.020615794, -0.00051344815, 1.1946508e-05, -2.3948315e-12, 0.00031197336, 0.014008854, -0.0007728819, -0.013695682, 0.0003186592, 5.4734335, 4.1430326, 3.5004094)
+transform = Transform3D(0.020001218, -0.00051660475, 1.044887e-05, -2.3234394e-12, 0.00031389133, 0.012252675, -0.0007498416, -0.0137798805, 0.00027871146, 0.39111733, 1.7547432, 4.9501667)
+metadata/_edit_group_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 15.0
+offset_right = 2.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Telefon" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(-224.99995, 715)
+scale = Vector2(0.9375, 0.69337004)
+texture = ExtResource("23_d13ii")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer2"]
+libraries = {
+&"": SubResource("AnimationLibrary_0odxb")
+}
