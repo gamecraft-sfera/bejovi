@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://dymi4b0r6mjb7"]
+
+[ext_resource type="Texture2D" uid="uid://o1qp4cvegk0x" path="res://textury/kov/OldIron01_4K_BaseColor.png" id="1_ehass"]
+[ext_resource type="Texture2D" uid="uid://dqij3jb5kcfhc" path="res://textury/kov/OldIron01_4K_Metallic.png" id="2_uwqdr"]
+[ext_resource type="Texture2D" uid="uid://dq0uhgyod576p" path="res://textury/kov/OldIron01_4K_Normal.png" id="3_3s3x8"]
+[ext_resource type="Texture2D" uid="uid://f65jwj1ejca5" path="res://textury/kov/OldIron01_4K_Roughness.png" id="4_cnkqb"]
+
+[resource]
+albedo_texture = ExtResource("1_ehass")
+metallic = 1.0
+metallic_texture = ExtResource("2_uwqdr")
+roughness_texture = ExtResource("4_cnkqb")
+normal_enabled = true
+normal_texture = ExtResource("3_3s3x8")
+uv1_triplanar = true

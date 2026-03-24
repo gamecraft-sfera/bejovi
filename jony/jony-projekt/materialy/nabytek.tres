@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://c3yyvcwjkyoi0"]
+
+[ext_resource type="Texture2D" uid="uid://beaj6tejvg31f" path="res://textury/podlaha/ParquetFlooring04_4K_BaseColor.png" id="1_akgvr"]
+[ext_resource type="Texture2D" uid="uid://c6mlfomb2ufgx" path="res://textury/podlaha/ParquetFlooring04_4K_Normal.png" id="2_6hchi"]
+[ext_resource type="Texture2D" uid="uid://du37yegnmwu1t" path="res://textury/podlaha/ParquetFlooring04_4K_Roughness.png" id="3_2v0ad"]
+
+[resource]
+albedo_color = Color(0.6858129, 0.46282423, 0, 1)
+albedo_texture = ExtResource("1_akgvr")
+roughness = 0.0
+roughness_texture = ExtResource("3_2v0ad")
+normal_enabled = true
+normal_texture = ExtResource("2_6hchi")
+uv1_scale = Vector3(0.316, 0.316, 0.316)
+uv1_triplanar = true
