@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccynxfpy7iqoc"]
+
+[ext_resource type="Texture2D" uid="uid://dnx78shft02hs" path="res://tree/SampleLeaves_2.tga" id="1_njplg"]
+
+[resource]
+resource_name = "SampleLeaves_2"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_njplg")
+emission_enabled = true
+billboard_keep_scale = true

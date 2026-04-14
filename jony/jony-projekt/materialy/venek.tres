@@ -1,0 +1,25 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://d2vl1d8i6tspv"]
+
+[ext_resource type="Texture2D" uid="uid://njjct3xo3b0d" path="res://textury/Grass005_1K-JPG_Color.jpg" id="1_1000t"]
+[ext_resource type="Texture2D" uid="uid://dwyapda3rj8sp" path="res://textury/Grass005_1K-JPG_AmbientOcclusion.jpg" id="2_40w66"]
+[ext_resource type="Texture2D" uid="uid://dtp2kcmap8j0b" path="res://textury/Grass005_1K-JPG_Displacement.jpg" id="3_aw36w"]
+[ext_resource type="Texture2D" uid="uid://dybfas0a27gxe" path="res://textury/Grass005_1K-JPG_NormalGL.jpg" id="4_ylilx"]
+[ext_resource type="Texture2D" uid="uid://bwnwtfvbpu8se" path="res://textury/Grass005_1K-JPG_Roughness.jpg" id="5_480qy"]
+
+[resource]
+albedo_texture = ExtResource("1_1000t")
+roughness_texture = ExtResource("5_480qy")
+normal_enabled = true
+normal_texture = ExtResource("4_ylilx")
+ao_enabled = true
+ao_texture = ExtResource("2_40w66")
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_flip_tangent = true
+heightmap_flip_binormal = true
+heightmap_texture = ExtResource("3_aw36w")
+heightmap_flip_texture = true
+uv1_scale = Vector3(0.655, 0.655, 0.655)
+uv1_triplanar = true
+uv1_world_triplanar = true

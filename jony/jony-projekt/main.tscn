@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://4faa3vb4kgmr"]
+[gd_scene load_steps=47 format=3 uid="uid://4faa3vb4kgmr"]
 
 [ext_resource type="PackedScene" uid="uid://dnk4anfjmd8mu" path="res://skrinka.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cbb3y1bhixhyi" path="res://main.gd" id="1_1u8w0"]
@@ -19,12 +19,15 @@
 [ext_resource type="Texture2D" uid="uid://ca6ltmhx3c6lm" path="res://textury/dvere/Wood04_4K_Roughness.png" id="11_vivmo"]
 [ext_resource type="Material" uid="uid://dw8koeasl81fd" path="res://materialy/strop.tres" id="15_82xsv"]
 [ext_resource type="PackedScene" uid="uid://bfdtqnsw06guf" path="res://plysaci/globusak1/Meshy_AI_Patchwork_Monster_Plu_0215175211_texture.fbx" id="18_074og"]
+[ext_resource type="Material" uid="uid://ctm0yjfqkctxj" path="res://materialy/strecha_mat.tres" id="18_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://slspw0yrqnh3" path="res://plysaci/Meshy_AI_Patchwork_Bat_Puppet_0215191020_texture.fbx" id="19_cegan"]
 [ext_resource type="PackedScene" uid="uid://yy5ym42dni2m" path="res://plysaci/Meshy_AI_Animation_Walking_withSkin.fbx" id="20_82xsv"]
 [ext_resource type="PackedScene" uid="uid://giivjwuig4f2" path="res://Cat_v1_L3.123cb1b1943a-2f48-4e44-8f71-6bbe19a3ab64/cat.glb" id="21_getpj"]
+[ext_resource type="Script" uid="uid://cryhqxn1tfn31" path="res://canvas_layer_2.gd" id="23_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://d22i0ybu1suyh" path="res://telefon.png" id="23_d13ii"]
 [ext_resource type="Texture2D" uid="uid://cixkq6qqv3rjw" path="res://textury/podlaha/pozadí phone.png" id="24_0odxb"]
 [ext_resource type="Texture2D" uid="uid://db6gm0msfs24" path="res://phone.png" id="24_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://dyjo38d0ucjls" path="res://kocicijidlo/scene.gltf" id="26_lswn8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d13ii"]
 shader = ExtResource("1_ryguw")
@@ -79,6 +82,8 @@ roughness_texture = ExtResource("11_vivmo")
 normal_enabled = true
 normal_texture = ExtResource("10_w48qg")
 uv1_triplanar = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_qsp4k"]
 
 [sub_resource type="Animation" id="Animation_1u8w0"]
 length = 0.001
@@ -381,12 +386,6 @@ cast_shadow = 0
 use_collision = true
 size = Vector3(7.906611, 0.39414215, 2.158217)
 
-[node name="CSGBox3D21" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.447807, 3.645868, 2.6061995)
-cast_shadow = 0
-use_collision = true
-size = Vector3(2.369297, 0.14367676, 9.162411)
-
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56086135, 1.9645864, 1.455738)
 material_override = ExtResource("2_5vw27")
@@ -569,14 +568,14 @@ size = Vector3(2.3513677, 1.2113622, 0.073664635)
 material = ExtResource("5_cegan")
 
 [node name="CSGBox3D75" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3190846, 4.040815, 2.3601613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3190846, 4.040815, 1.6398511)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.35556647, 0.4727362, 0.21769595)
 material = ExtResource("5_cegan")
 
 [node name="CSGBox3D76" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3190846, 4.041303, 2.6369874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3190846, 4.041303, 1.7504342)
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.35556647, 0.47175965, 0.21769595)
@@ -616,13 +615,6 @@ cast_shadow = 0
 use_collision = true
 size = Vector3(0.70852077, 0.034453094, 1.1504434)
 material = SubResource("StandardMaterial3D_ryguw")
-
-[node name="CSGBox3D52" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.059365, 3.5335476, 7.2268257)
-cast_shadow = 0
-use_collision = true
-size = Vector3(2.2574956, 0.26302975, 0.073664635)
-material = ExtResource("5_cegan")
 
 [node name="CSGBox3D50" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154145, 4.2445083, 0.61714995)
@@ -769,7 +761,7 @@ size = Vector3(1.7370119, 0.09030025, 0.45821905)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0120518, 3.8057797, 9.612311)
 
 [node name="lampa" parent="." instance=ExtResource("2_272bh")]
-transform = Transform3D(-0.05522901, 0, 0.9984737, 0, 1, 0, -0.9984737, 0, -0.05522901, 1.6952913, 3.8166988, 9.561111)
+transform = Transform3D(-0.05522901, 0, 0.9984737, 0, 1, 0, -0.9984737, 0, -0.05522901, 1.6951693, 3.8318698, 9.553605)
 
 [node name="CSGBox3D45" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5704653, 4.4177995, 8.271355)
@@ -1054,6 +1046,34 @@ cast_shadow = 0
 use_collision = true
 size = Vector3(0.32183886, 1.2165331, 2.4666424)
 
+[node name="CSGBox3D10" type="CSGBox3D" parent="Dvere2"]
+transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974118e-11, 1.5637424e-09, -2.7860478e-11, 1, -0.41885984, 6.94409, 1.9887617)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(18.718407, 0.47740716, 6.934765)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Dvere2"]
+transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974118e-11, 1.5637466e-09, -2.7860478e-11, 1, -0.21983981, -1.4722881, 1.9887614)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(18.547558, 0.47740716, 6.934765)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Dvere2"]
+transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974118e-11, 1.5637881e-09, -2.7860478e-11, 1, -9.613468, 2.4062052, 1.9887617)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(0.43619347, 8.860563, 6.934765)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Dvere2"]
+transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974118e-11, 1.5638005e-09, -2.7860478e-11, 1, 8.941123, 3.0331063, 1.8910568)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(0.14991406, 8.860563, 6.739355)
+
 [node name="klika" type="CSGBox3D" parent="Dvere2"]
 transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974118e-11, 1.5637073e-09, -2.7860478e-11, 1, 0.2943611, 3.5069287, 0.18152428)
 material_override = SubResource("StandardMaterial3D_2cqfq")
@@ -1225,6 +1245,30 @@ cast_shadow = 0
 use_collision = true
 size = Vector3(8.1567135, 0.2928772, 4.813842)
 
+[node name="Strop1_4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.8221443, 0.56927973, 0, -0.56927973, 0.8221443, 1.7865916, 9.786878, -3.35972)
+cast_shadow = 0
+use_collision = true
+size = Vector3(8.984555, 0.08755786, 12.147832)
+material = ExtResource("18_xuqvo")
+
+[node name="Strop1_5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.85626704, -0.5165333, 0, 0.51653326, 0.8562671, 1.828639, 10.108849, 6.8754597)
+cast_shadow = 0
+use_collision = true
+size = Vector3(9.198045, 0.001, 12.289783)
+material = ExtResource("18_xuqvo")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(-0.117281824, -0.19377415, 0.46123227, -0.6253626, 6.5431485, 0.013566787, -20.517326, -0.19832551, -0.0030500288, -2.5646675, 9.968252, 1.7326539)
+mesh = SubResource("PrismMesh_qsp4k")
+material = ExtResource("18_xuqvo")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+transform = Transform3D(-0.45063803, -0.19697101, 0.46112183, -0.62536263, 6.5431485, 0.013566787, -20.512712, -0.19515084, -0.010543867, 6.178917, 9.968252, 1.7326539)
+mesh = SubResource("PrismMesh_qsp4k")
+material = ExtResource("18_xuqvo")
+
 [node name="Strop1_3" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6304145, 6.7923822, 8.371759)
 material_override = ExtResource("15_82xsv")
@@ -1320,41 +1364,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629602, 4.181864, 5.536608
 visible = false
 
 [node name="cat" parent="." instance=ExtResource("21_getpj")]
-transform = Transform3D(0.015109839, -0.00051344297, 1.0450191e-05, -1.7552328e-12, 0.00031197022, 0.012254224, -0.0005664648, -0.013695543, 0.00027874668, 0.39111733, 1.7547432, 4.9501667)
+transform = Transform3D(0.036779426, -0.00084358855, 1.241472e-05, -4.2724786e-12, 0.0005125681, 0.014557894, -0.0013788532, -0.022501824, 0.00033114819, 0.6994846, 1.7547432, -0.5118331)
 metadata/_edit_group_ = true
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="TelefonCanvas" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("23_a6jrf")
 
-[node name="Control" type="Control" parent="CanvasLayer2"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -7.0
-offset_right = -10.0
-offset_bottom = -7.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+[node name="WhatsappButton" type="Button" parent="TelefonCanvas"]
+offset_left = 344.99994
+offset_top = 174.99994
+offset_right = 411.0
+offset_bottom = 251.0
+flat = true
 
-[node name="Telefon" type="Sprite2D" parent="CanvasLayer2"]
+[node name="Telefon" type="Sprite2D" parent="TelefonCanvas"]
 position = Vector2(-224.99995, 715)
 scale = Vector2(0.9375, 0.69337004)
 texture = ExtResource("23_d13ii")
 
-[node name="PozadíPhone" type="Sprite2D" parent="CanvasLayer2/Telefon"]
+[node name="PozadíPhone" type="Sprite2D" parent="TelefonCanvas/Telefon"]
 visible = false
 position = Vector2(157.64893, 389.71844)
 scale = Vector2(0.074278586, 0.26353428)
 texture = ExtResource("24_0odxb")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer2"]
+[node name="SmSText" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone"]
+unique_name_in_owner = true
+visible = false
+offset_left = -1225.5029
+offset_top = -1747.9489
+offset_right = -463.9129
+offset_bottom = -579.1919
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = 38.659527
+offset_top = 122.75407
+offset_right = 717.65955
+offset_bottom = 205.75406
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Ahoj vnuku, nakrm číču"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TelefonCanvas"]
 libraries = {
 &"": SubResource("AnimationLibrary_0odxb")
 }
 
-[node name="TelefonButton" type="TextureButton" parent="CanvasLayer2"]
+[node name="TelefonButton" type="TextureButton" parent="TelefonCanvas"]
 unique_name_in_owner = true
 offset_left = -19.0
 offset_top = 378.0
@@ -1362,4 +1420,8 @@ offset_right = 237.0
 offset_bottom = 634.0
 texture_normal = ExtResource("24_1u8w0")
 
-[connection signal="pressed" from="CanvasLayer2/TelefonButton" to="." method="_on_telefon_button_pressed"]
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("26_lswn8")]
+transform = Transform3D(-0.28578407, 0, -0.5189087, 0, 0.71135205, 0, 0.53207046, 0, -0.27871463, 5.032761, 3.8001328, 2.7174463)
+
+[connection signal="pressed" from="TelefonCanvas/WhatsappButton" to="TelefonCanvas" method="_on_whatsapp_button_pressed"]
+[connection signal="pressed" from="TelefonCanvas/TelefonButton" to="." method="_on_telefon_button_pressed"]
