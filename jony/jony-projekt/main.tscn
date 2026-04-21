@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://4faa3vb4kgmr"]
+[gd_scene load_steps=58 format=3 uid="uid://4faa3vb4kgmr"]
 
 [ext_resource type="PackedScene" uid="uid://dnk4anfjmd8mu" path="res://skrinka.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cbb3y1bhixhyi" path="res://main.gd" id="1_1u8w0"]
@@ -13,7 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://h0aungqmcgrs" path="res://skrin_horni.tscn" id="3_5vw27"]
 [ext_resource type="Texture2D" uid="uid://du37yegnmwu1t" path="res://textury/podlaha/ParquetFlooring04_4K_Roughness.png" id="3_074og"]
 [ext_resource type="Material" uid="uid://dymi4b0r6mjb7" path="res://materialy/klika.tres" id="3_dg77c"]
+[ext_resource type="Shader" uid="uid://do00wns7k57ci" path="res://color_blind.gdshader" id="3_qsp4k"]
+[ext_resource type="Shader" uid="uid://bb3y7faqdfs8a" path="res://koloduhove.gdshader" id="4_kq58d"]
 [ext_resource type="Material" uid="uid://c3yyvcwjkyoi0" path="res://materialy/nabytek.tres" id="5_cegan"]
+[ext_resource type="Shader" uid="uid://diwr2ga341g17" path="res://blink.gdshader" id="5_seu75"]
 [ext_resource type="Texture2D" uid="uid://dyls183cvryxl" path="res://textury/dvere/Wood04_4K_BaseColor.png" id="9_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://clukwsxvaop4f" path="res://textury/dvere/Wood04_4K_Normal.png" id="10_w48qg"]
 [ext_resource type="Texture2D" uid="uid://ca6ltmhx3c6lm" path="res://textury/dvere/Wood04_4K_Roughness.png" id="11_vivmo"]
@@ -28,10 +31,29 @@
 [ext_resource type="Texture2D" uid="uid://cixkq6qqv3rjw" path="res://textury/podlaha/pozadí phone.png" id="24_0odxb"]
 [ext_resource type="Texture2D" uid="uid://db6gm0msfs24" path="res://phone.png" id="24_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://dyjo38d0ucjls" path="res://kocicijidlo/scene.gltf" id="26_lswn8"]
+[ext_resource type="Texture2D" uid="uid://d001y7yhpswwo" path="res://kocicijidlo/ruka2.png" id="31_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://brthhr23jexsh" path="res://kocicijidlo/ruka4.png" id="32_ok6jj"]
+[ext_resource type="Texture2D" uid="uid://dmw8fmign8nb2" path="res://kocicijidlo/IMG_8228.png" id="33_facbu"]
+[ext_resource type="Texture2D" uid="uid://bxvivsdy1eg08" path="res://kocicijidlo/ruka5.png" id="34_b1qrp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d13ii"]
 shader = ExtResource("1_ryguw")
 shader_parameter/pixel = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kq58d"]
+shader = ExtResource("3_qsp4k")
+shader_parameter/color_deficiency_type = 7
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_seu75"]
+shader = ExtResource("4_kq58d")
+shader_parameter/speed = 1.0
+shader_parameter/pruhlednost = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_htxhm"]
+shader = ExtResource("5_seu75")
+shader_parameter/open_amount = 0.4499999899416
+shader_parameter/edge_blur_amount = 0.249999994412
+shader_parameter/color = Color(0, 0, 0, 1)
 
 [sub_resource type="Environment" id="Environment_h2yge"]
 background_mode = 1
@@ -290,6 +312,35 @@ _data = {
 &"telefon": SubResource("Animation_d13ii")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_come4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_0rl1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ok6jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ok6jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_facbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_b1qrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_b1qrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_b1qrp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Game" type="Node3D"]
 script = ExtResource("1_1u8w0")
 
@@ -297,6 +348,40 @@ script = ExtResource("1_1u8w0")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_d13ii")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer2"]
+self_modulate = Color(1, 1, 1, 0.6901961)
+material = SubResource("ShaderMaterial_kq58d")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer3"]
+material = SubResource("ShaderMaterial_seu75")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer4"]
+material = SubResource("ShaderMaterial_htxhm")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1419,6 +1504,12 @@ offset_top = 378.0
 offset_right = 237.0
 offset_bottom = 634.0
 texture_normal = ExtResource("24_1u8w0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TelefonCanvas"]
+position = Vector2(866, 386.00003)
+scale = Vector2(0.1348039, 0.09121148)
+sprite_frames = SubResource("SpriteFrames_come4")
+frame_progress = 0.91511077
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("26_lswn8")]
 transform = Transform3D(-0.28578407, 0, -0.5189087, 0, 0.71135205, 0, 0.53207046, 0, -0.27871463, 5.032761, 3.8001328, 2.7174463)
