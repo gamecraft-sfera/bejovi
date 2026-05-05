@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://4faa3vb4kgmr"]
+[gd_scene load_steps=61 format=3 uid="uid://4faa3vb4kgmr"]
 
 [ext_resource type="PackedScene" uid="uid://dnk4anfjmd8mu" path="res://skrinka.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cbb3y1bhixhyi" path="res://main.gd" id="1_1u8w0"]
@@ -21,6 +21,7 @@
 [ext_resource type="Material" uid="uid://d2vl1d8i6tspv" path="res://materialy/venek.tres" id="10_facbu"]
 [ext_resource type="Texture2D" uid="uid://clukwsxvaop4f" path="res://textury/dvere/Wood04_4K_Normal.png" id="10_w48qg"]
 [ext_resource type="Texture2D" uid="uid://ca6ltmhx3c6lm" path="res://textury/dvere/Wood04_4K_Roughness.png" id="11_vivmo"]
+[ext_resource type="PackedScene" uid="uid://bu4cfi5uim43x" path="res://key_pickup.tscn" id="13_b1qrp"]
 [ext_resource type="Material" uid="uid://dw8koeasl81fd" path="res://materialy/strop.tres" id="15_82xsv"]
 [ext_resource type="PackedScene" uid="uid://bfdtqnsw06guf" path="res://plysaci/globusak1/Meshy_AI_Patchwork_Monster_Plu_0215175211_texture.fbx" id="18_074og"]
 [ext_resource type="Material" uid="uid://ctm0yjfqkctxj" path="res://materialy/strecha_mat.tres" id="18_xuqvo"]
@@ -566,6 +567,9 @@ cast_shadow = 0
 use_collision = true
 size = Vector3(0.28839886, 0.0385953, 0.037006304)
 
+[node name="KeyPickup" parent="klič1" instance=ExtResource("13_b1qrp")]
+color = 1
+
 [node name="klič2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4724404, 1.5195132, 5.8694167)
 material_override = ExtResource("10_facbu")
@@ -593,6 +597,9 @@ material_override = ExtResource("3_dg77c")
 cast_shadow = 0
 use_collision = true
 size = Vector3(0.28839886, 0.0385953, 0.037006304)
+
+[node name="KeyPickup" parent="klič2" instance=ExtResource("13_b1qrp")]
+color = 2
 
 [node name="CSGBox3D36" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6846015, 3.5443363, 10.978337)
@@ -1391,9 +1398,11 @@ size = Vector3(0.43619347, 8.860563, 6.934765)
 
 [node name="Dvere2" parent="." instance=ExtResource("21_ok6jj")]
 transform = Transform3D(0.033783156, -0.9994291, -4.3686438e-08, 0, -4.3711385e-08, 1, -0.9994291, -0.033783156, -1.4767089e-09, 0.042408705, 1.5734134, 1.4657629)
+key_color = 1
 
 [node name="Dvere4" parent="." instance=ExtResource("21_ok6jj")]
 transform = Transform3D(0.033783156, -0.9994291, -4.3686438e-08, 0, -4.3711385e-08, 1, -0.9994291, -0.033783156, -1.4767089e-09, -0.86469895, 1.5734134, -2.190956)
+key_color = 2
 
 [node name="Dvere5" parent="." instance=ExtResource("21_ok6jj")]
 transform = Transform3D(0.033783156, -0.9994291, -4.3686438e-08, 0, -4.3711385e-08, 1, -0.9994291, -0.033783156, -1.4767089e-09, -1.5665889, 5.076909, -1.216784)
