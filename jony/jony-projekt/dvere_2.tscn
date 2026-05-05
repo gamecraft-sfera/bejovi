@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=3 uid="uid://j5o6t6g8yxl7"]
+
+[ext_resource type="Script" uid="uid://dc54lr5cpqw50" path="res://dvere_2.gd" id="1_0u74y"]
+[ext_resource type="Texture2D" uid="uid://dyls183cvryxl" path="res://textury/dvere/Wood04_4K_BaseColor.png" id="1_7ru3y"]
+[ext_resource type="Texture2D" uid="uid://clukwsxvaop4f" path="res://textury/dvere/Wood04_4K_Normal.png" id="2_0u74y"]
+[ext_resource type="Texture2D" uid="uid://ca6ltmhx3c6lm" path="res://textury/dvere/Wood04_4K_Roughness.png" id="3_m8rs0"]
+[ext_resource type="Material" uid="uid://dymi4b0r6mjb7" path="res://materialy/klika.tres" id="4_i5yw0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2cqfq"]
+albedo_texture = ExtResource("1_7ru3y")
+roughness_texture = ExtResource("3_m8rs0")
+normal_enabled = true
+normal_texture = ExtResource("2_0u74y")
+uv1_triplanar = true
+
+[sub_resource type="Animation" id="Animation_m8rs0"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Group:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(4.246603e-15, -1.110223e-16, 0), Vector3(6.233245e-08, 3.9546688e-08, -2.0108635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Group/klika:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0753492, -1.0194917, 0.18152408)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Group/klika:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.26, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(2.8090143e-11, -1.5637005e-09, 0.03577928), Vector3(-0.5000185, -0.019556765, 0.04077328), Vector3(0.021384086, 0.00076554896, 0.035787456)]
+}
+
+[sub_resource type="Animation" id="Animation_i5yw0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Group:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.246603e-15, -1.110223e-16, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Group/klika:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0753492, -1.0194917, 0.18152408)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Group/klika:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.8090143e-11, -1.5637005e-09, 0.03577928)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ietsg"]
+_data = {
+&"RESET": SubResource("Animation_i5yw0"),
+&"open": SubResource("Animation_m8rs0")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cpg72"]
+size = Vector3(2.6483002, 1.3099976, 1)
+
+[node name="Dvere2" type="Node3D"]
+transform = Transform3D(0.03378316, -0.99942917, -4.3686438e-08, 0, -4.371139e-08, 1, -0.99942917, -0.03378316, -1.4767089e-09, 0, 0, 0)
+script = ExtResource("1_0u74y")
+
+[node name="Group" type="Node3D" parent="."]
+transform = Transform3D(1, -4.7146765e-31, -1.110223e-16, 0, 1, -4.246603e-15, 1.110223e-16, 4.246603e-15, 1, 0, 0, 0)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Group"]
+transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974125e-11, 1.563639e-09, -2.786403e-11, 1, 0.03758149, -0.5790274, -7.864683e-08)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(0.32183886, 1.1664646, 2.4666424)
+
+[node name="klika" type="CSGBox3D" parent="Group"]
+transform = Transform3D(0.9993621, -0.035771716, -1.5637007e-09, 0.035771724, 0.999362, -2.8090147e-11, 1.5637078e-09, -2.7864034e-11, 1.0000001, 0.0753492, -1.0194917, 0.18152408)
+material_override = ExtResource("4_i5yw0")
+cast_shadow = 0
+use_collision = true
+size = Vector3(0.78843784, 0.060788557, 0.06132102)
+
+[node name="1464947" type="CSGBox3D" parent="Group/klika"]
+transform = Transform3D(1, 0, -2.0816682e-17, 0, 1, -1.0390994e-15, 3.5083048e-14, 9.772809e-15, 1, 0.37454653, 0.08077823, -0.009162903)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(0.0645411, 0.22393738, 0.06132102)
+
+[node name="1464946" type="CSGBox3D" parent="Group/klika"]
+transform = Transform3D(1, 0, -6.938894e-18, 0, 1, -1.0391265e-15, 3.463896e-14, 2.6673813e-15, 1, -0.40206003, 0.08232341, 0)
+material_override = SubResource("StandardMaterial3D_2cqfq")
+cast_shadow = 0
+use_collision = true
+size = Vector3(0.0645411, 0.22393738, 0.06132102)
+material = ExtResource("4_i5yw0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ietsg")
+}
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 6.9041994e-16, 2.4424907e-14, 7.822909e-13, 1, -0.11605075, -0.5750435, -5.896672e-14)
+shape = SubResource("BoxShape3D_cpg72")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
