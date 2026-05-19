@@ -1746,6 +1746,11 @@ frame_progress = 0.91511077
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("26_lswn8")]
 transform = Transform3D(-0.28578407, 0, -0.5189087, 0, 0.71135205, 0, 0.53207046, 0, -0.27871463, 5.032761, 3.8001328, 2.7174463)
 
+[node name="Priserky1" type="Node3D" parent="."]
+
+[node name="Meshy_AI_Animation_Walking_withSkin" parent="Priserky1" instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.7909032, -0.25492388, -0.5563146, 1.4901161e-08, 0.909098, -0.4165823, 0.6119412, 0.32947627, 0.7190086, 5.583418, 2.1012702, -2.039114)
+
 [connection signal="pressed" from="TelefonCanvas/WhatsappButton" to="TelefonCanvas" method="_on_whatsapp_button_pressed"]
 [connection signal="pressed" from="TelefonCanvas/TelefonButton" to="." method="_on_telefon_button_pressed"]
 

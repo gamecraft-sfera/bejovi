@@ -1,0 +1,592 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwvtd6m601yvr"]
+
+[ext_resource type="Texture2D" uid="uid://dpwv7elulbosq" path="res://babi/baba klič.png" id="1_2q4il"]
+[ext_resource type="Texture2D" uid="uid://bjh574effw8qx" path="res://babi/baba.png" id="1_xtvdw"]
+[ext_resource type="Texture2D" uid="uid://cnrkwudettk1u" path="res://babi/smutna baba.png" id="2_qycf5"]
+[ext_resource type="Texture2D" uid="uid://dccpnv2byqm63" path="res://babi/zajimava baba.png" id="3_xtvdw"]
+[ext_resource type="Texture2D" uid="uid://dfsa5ww5bpk6o" path="res://babi/baba ruka.png" id="5_h8sat"]
+[ext_resource type="Texture2D" uid="uid://dbn8yb3r5opiw" path="res://babi/baba huh.png" id="6_j3i1v"]
+[ext_resource type="Texture2D" uid="uid://dcvmhf72sv7qa" path="res://babi/baba strasidelna.png" id="7_ee4fx"]
+[ext_resource type="Texture2D" uid="uid://d4cgwugblklh4" path="res://babi/baba divna.png" id="8_ee4fx"]
+
+[sub_resource type="Animation" id="Animation_h8sat"]
+resource_name = "baba"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3i1v"]
+_data = {
+&"baba": SubResource("Animation_h8sat")
+}
+
+[sub_resource type="Animation" id="Animation_g0imy"]
+resource_name = "baby"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BabaHuh:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BabaHuh:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.43333334, 0.7, 1.0666667, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(620, 349.4911), Vector2(475.5, 488.49112), Vector2(575, 424), Vector2(575, 538), Vector2(503.125, 218), Vector2(503.125, 218)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BabaHuh:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333, 0.8333333, 1.0333333, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.25887096, 0.2608273), Vector2(0.14233871, 0.18157987), Vector2(0.23185486, 0.16105537), Vector2(0.23185486, 0.048460636), Vector2(0.41118953, 0.2941847), Vector2(-0.2688842, 0.22401398)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BabaStrasidelna:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.35, 0.9, 1.0666667, 1.6333333, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(616.00006, 191.99997), Vector2(616.00006, 191.99997), Vector2(616.00006, 191.99997), Vector2(616.00006, 191.99997), Vector2(616.00006, 191.99997)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BabaStrasidelna:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.35, 0.79, 1.3, 1.45, 1.7333333, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.70251256, -0.70251256, -0.70251256, -0.70251256, -0.70251256, -0.70251256]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BabaStrasidelna:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.7, 1.0666667, 1.4666667, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.9411869, 0.8431581), Vector2(0.19808555, 0.38603085), Vector2(4.298621, 0.29913583), Vector2(1.3490553, 0.6113576), Vector2(-0.8522429, -0.79838896)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BabaStrasidelna:skew")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.79, 1.3, 1.45, 1.83, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BabaDivna:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.02, 2.57, 2.82, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(792, 277), Vector2(792, 277), Vector2(792, 277), Vector2(792, 277)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BabaDivna:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.02, 2.57, 2.82, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BabaDivna:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.02, 2.57, 2.82, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.24000004, 0.17961589), Vector2(2.3178036, -0.39945126), Vector2(0.4717022, -0.39945126)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BabaDivna:skew")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.02, 2.57, 2.82, 3.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BabaHuh:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(3.07),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BabaHuh:skew")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(3.07),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BabaStrasidelna:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BabaDivna:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1.8333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_jx2al"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BabaHuh:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BabaHuh:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(475.5, 488.49112)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BabaHuh:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.14233871, 0.18157987)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BabaStrasidelna:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(616.00006, 191.99997)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BabaStrasidelna:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.70251256]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BabaStrasidelna:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.9411869, 0.8431581)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BabaStrasidelna:skew")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BabaDivna:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(792, 277)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BabaDivna:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BabaDivna:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BabaDivna:skew")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BabaHuh:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BabaHuh:skew")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BabaStrasidelna:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BabaDivna:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bl42i"]
+_data = {
+&"RESET": SubResource("Animation_jx2al"),
+&"baby": SubResource("Animation_g0imy")
+}
+
+[node name="Babi" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_j3i1v")
+}
+
+[node name="Obr1" type="Node2D" parent="."]
+visible = false
+
+[node name="Baba" type="Sprite2D" parent="Obr1"]
+position = Vector2(635, 344)
+scale = Vector2(0.3449596, 0.350057)
+texture = ExtResource("1_xtvdw")
+
+[node name="Label" type="Label" parent="Obr1"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "už ti je 16 a to znamená 
+že už jsi velký "
+
+[node name="Obr2" type="Node2D" parent="."]
+visible = false
+
+[node name="Baba" type="Sprite2D" parent="Obr2"]
+position = Vector2(635, 344)
+scale = Vector2(0.3449596, 0.350057)
+texture = ExtResource("1_xtvdw")
+
+[node name="Label" type="Label" parent="Obr2"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "tak sem se rozhodla že
+pojedu na chatu s"
+
+[node name="Obr3" type="Node2D" parent="."]
+visible = false
+
+[node name="Baba" type="Sprite2D" parent="Obr3"]
+position = Vector2(635, 344)
+scale = Vector2(0.3449596, 0.350057)
+texture = ExtResource("1_xtvdw")
+
+[node name="Label" type="Label" parent="Obr3"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "mími kamarádky a 
+nechám tě doma sama"
+
+[node name="Obr4" type="Node2D" parent="."]
+visible = false
+
+[node name="SmutnaBaba" type="Sprite2D" parent="Obr4"]
+position = Vector2(644.34375, 348.3125)
+scale = Vector2(0.35108367, 0.3570767)
+texture = ExtResource("2_qycf5")
+
+[node name="Label" type="Label" parent="Obr4"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "        budemetam"
+
+[node name="Obr5" type="Node2D" parent="."]
+visible = false
+
+[node name="SmutnaBaba" type="Sprite2D" parent="Obr5"]
+position = Vector2(644.34375, 348.3125)
+scale = Vector2(0.35108367, 0.3570767)
+texture = ExtResource("2_qycf5")
+
+[node name="Label" type="Label" parent="Obr5"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "                7 dní..."
+
+[node name="Obr6" type="Node2D" parent="."]
+visible = false
+
+[node name="ZajimavaBaba" type="Sprite2D" parent="Obr6"]
+position = Vector2(647.5, 348.25)
+scale = Vector2(0.34879035, 0.34763402)
+texture = ExtResource("3_xtvdw")
+
+[node name="Label" type="Label" parent="Obr6"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "                 ....."
+
+[node name="Obr7" type="Node2D" parent="."]
+visible = false
+
+[node name="ZajimavaBaba" type="Sprite2D" parent="Obr7"]
+position = Vector2(647.5, 348.25)
+scale = Vector2(0.34879035, 0.34763402)
+texture = ExtResource("3_xtvdw")
+
+[node name="Label" type="Label" parent="Obr7"]
+visible = false
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "               odjí ždíme 
+          za 5 minut takže..."
+
+[node name="Obr8" type="Node2D" parent="."]
+visible = false
+
+[node name="BabaKlič" type="Sprite2D" parent="Obr8"]
+position = Vector2(645.24994, 356.00003)
+scale = Vector2(0.34415317, 0.35404792)
+texture = ExtResource("1_2q4il")
+
+[node name="Label" type="Label" parent="Obr8"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "               tady máš 
+                   klíče"
+
+[node name="Obr9" type="Node2D" parent="."]
+
+[node name="BabaKlič" type="Sprite2D" parent="Obr9"]
+position = Vector2(645.24994, 356.00003)
+scale = Vector2(0.34415317, 0.35404792)
+texture = ExtResource("1_2q4il")
+
+[node name="Label" type="Label" parent="Obr9"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "               tady máš 
+                   klíče"
+
+[node name="BabaRuka" type="Sprite2D" parent="Obr9"]
+position = Vector2(642, 353.00003)
+scale = Vector2(0.35806453, 0.3671608)
+texture = ExtResource("5_h8sat")
+
+[node name="Button" type="Button" parent="Obr9"]
+offset_left = 625.0
+offset_top = 556.0
+offset_right = 799.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 35
+text = "přijmout"
+
+[node name="Button2" type="Button" parent="Obr9"]
+offset_left = 366.0
+offset_top = 556.0
+offset_right = 540.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 35
+text = "odmítnout"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Obr9"]
+libraries = {
+&"": SubResource("AnimationLibrary_bl42i")
+}
+
+[node name="BabaHuh" type="Sprite2D" parent="Obr9"]
+visible = false
+position = Vector2(475.5, 488.49112)
+scale = Vector2(0.14233871, 0.18157987)
+texture = ExtResource("6_j3i1v")
+
+[node name="BabaStrasidelna" type="Sprite2D" parent="Obr9"]
+visible = false
+position = Vector2(616.00006, 191.99997)
+rotation = -0.70251256
+scale = Vector2(-0.9411869, 0.8431581)
+texture = ExtResource("7_ee4fx")
+
+[node name="BabaDivna" type="Sprite2D" parent="Obr9"]
+visible = false
+position = Vector2(792, 277)
+texture = ExtResource("8_ee4fx")
