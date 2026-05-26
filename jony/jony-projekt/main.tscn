@@ -211,7 +211,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_d13ii"]
 resource_name = "telefon"
-length = 10.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1681,7 +1681,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8629602, 4.181864, 5.536608
 visible = false
 
 [node name="cat" parent="." instance=ExtResource("21_getpj")]
-transform = Transform3D(0.036779426, -0.00084358855, 1.241472e-05, -4.2724786e-12, 0.0005125681, 0.014557894, -0.0013788532, -0.022501824, 0.00033114819, 5.272134, 4.0838804, 3.3885028)
+transform = Transform3D(0.0034083922, -0.010586134, 0.00025366753, -3.589312e-12, 0.0002477146, 0.011455694, -0.014308041, -0.0025217766, 6.04274e-05, 2.3476489, 3.8269198, 9.61341)
 metadata/_edit_group_ = true
 
 [node name="TelefonCanvas" type="CanvasLayer" parent="."]
@@ -1708,21 +1708,105 @@ texture = ExtResource("24_0odxb")
 
 [node name="SmSText" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone"]
 unique_name_in_owner = true
-visible = false
-offset_left = -1225.5029
+offset_left = -1250.6313
 offset_top = -1747.9489
-offset_right = -463.9129
+offset_right = -463.91284
 offset_bottom = -579.1919
+color = Color(0.71364987, 0.9703805, 0.83445656, 1)
 
-[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+[node name="ColorRect" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
 layout_mode = 0
-offset_left = 38.659527
-offset_top = 122.75407
-offset_right = 717.65955
-offset_bottom = 205.75406
+offset_left = 77.31869
+offset_top = 527.3238
+offset_right = 539.29846
+offset_bottom = 615.4992
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/ColorRect"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/ColorRect"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 35
 text = "Ahoj vnuku, nakrm číču"
+
+[node name="ColorRect2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = 226.15733
+offset_top = 736.52435
+offset_right = 688.1372
+offset_bottom = 819.513
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/ColorRect2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jasně babi"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = 681.41327
+offset_top = 788.1991
+offset_right = 755.74615
+offset_bottom = 818.45123
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = -1.933094
+offset_top = -1.7289305
+offset_right = 786.7184
+offset_bottom = 131.39873
+color = Color(0.061498925, 0.69240767, 0.583571, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/ColorRect3"]
+layout_mode = 0
+offset_left = 172.0343
+offset_top = 41.49433
+offset_right = 347.9345
+offset_bottom = 105.46473
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Babička"
+
+[node name="ColorRect4" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = 32.86037
+offset_top = 25.933956
+offset_right = 139.17366
+offset_bottom = 107.193695
+color = Color(0.55270267, 0.6261257, 0.60333925, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = 50.257084
+offset_top = 76.07294
+offset_right = 121.77698
+offset_bottom = 107.19367
+
+[node name="ColorRect6" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText"]
+layout_mode = 0
+offset_left = 71.519714
+offset_top = 34.578606
+offset_right = 100.51434
+offset_bottom = 65.69934
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TelefonCanvas"]
 libraries = {
@@ -1737,7 +1821,8 @@ offset_right = 237.0
 offset_bottom = 634.0
 texture_normal = ExtResource("24_1u8w0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TelefonCanvas"]
+[node name="Ruka" type="AnimatedSprite2D" parent="TelefonCanvas"]
+visible = false
 position = Vector2(866, 386.00003)
 scale = Vector2(0.1348039, 0.09121148)
 sprite_frames = SubResource("SpriteFrames_come4")
@@ -1747,6 +1832,7 @@ frame_progress = 0.91511077
 transform = Transform3D(-0.28578407, 0, -0.5189087, 0, 0.71135205, 0, 0.53207046, 0, -0.27871463, 5.032761, 3.8001328, 2.7174463)
 
 [node name="Priserky1" type="Node3D" parent="."]
+visible = false
 
 [node name="Meshy_AI_Animation_Walking_withSkin" parent="Priserky1" instance=ExtResource("20_82xsv")]
 transform = Transform3D(0.7909032, -0.25492388, -0.5563146, 1.4901161e-08, 0.909098, -0.4165823, 0.6119412, 0.32947627, 0.7190086, 5.583418, 2.1012702, -2.039114)
