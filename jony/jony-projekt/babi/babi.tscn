@@ -1,0 +1,199 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwvtd6m601yvr"]
+
+[ext_resource type="Texture2D" uid="uid://dpwv7elulbosq" path="res://babi/baba klič.png" id="1_2q4il"]
+[ext_resource type="Script" uid="uid://bncd37lqsxvvp" path="res://babi/babi.gd" id="1_h8sat"]
+[ext_resource type="Texture2D" uid="uid://bjh574effw8qx" path="res://babi/baba.png" id="1_xtvdw"]
+[ext_resource type="Texture2D" uid="uid://cnrkwudettk1u" path="res://babi/smutna baba.png" id="2_qycf5"]
+[ext_resource type="Texture2D" uid="uid://dccpnv2byqm63" path="res://babi/zajimava baba.png" id="3_xtvdw"]
+[ext_resource type="Texture2D" uid="uid://dfsa5ww5bpk6o" path="res://babi/baba ruka.png" id="5_h8sat"]
+
+[sub_resource type="Animation" id="Animation_h8sat"]
+resource_name = "baba"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3i1v"]
+_data = {
+&"baba": SubResource("Animation_h8sat")
+}
+
+[node name="Babi" type="Node2D"]
+script = ExtResource("1_h8sat")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_j3i1v")
+}
+
+[node name="Obr1" type="Node2D" parent="."]
+visible = false
+
+[node name="Baba" type="Sprite2D" parent="Obr1"]
+position = Vector2(635, 344)
+scale = Vector2(0.3449596, 0.350057)
+texture = ExtResource("1_xtvdw")
+
+[node name="Label" type="Label" parent="Obr1"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "už ti je 16 a to znamená 
+že už jsi velký "
+
+[node name="Obr2" type="Node2D" parent="."]
+visible = false
+
+[node name="Baba" type="Sprite2D" parent="Obr2"]
+position = Vector2(635, 344)
+scale = Vector2(0.3449596, 0.350057)
+texture = ExtResource("1_xtvdw")
+
+[node name="Label" type="Label" parent="Obr2"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "tak sem se rozhodla že
+pojedu na chatu s"
+
+[node name="Obr3" type="Node2D" parent="."]
+visible = false
+
+[node name="Baba" type="Sprite2D" parent="Obr3"]
+position = Vector2(635, 344)
+scale = Vector2(0.3449596, 0.350057)
+texture = ExtResource("1_xtvdw")
+
+[node name="Label" type="Label" parent="Obr3"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "mími kamarádky a 
+nechám tě doma sama"
+
+[node name="Obr4" type="Node2D" parent="."]
+visible = false
+
+[node name="SmutnaBaba" type="Sprite2D" parent="Obr4"]
+position = Vector2(644.34375, 348.3125)
+scale = Vector2(0.35108367, 0.3570767)
+texture = ExtResource("2_qycf5")
+
+[node name="Label" type="Label" parent="Obr4"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "        budemetam"
+
+[node name="Obr5" type="Node2D" parent="."]
+visible = false
+
+[node name="SmutnaBaba" type="Sprite2D" parent="Obr5"]
+position = Vector2(644.34375, 348.3125)
+scale = Vector2(0.35108367, 0.3570767)
+texture = ExtResource("2_qycf5")
+
+[node name="Label" type="Label" parent="Obr5"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "                7 dní..."
+
+[node name="Obr6" type="Node2D" parent="."]
+visible = false
+
+[node name="ZajimavaBaba" type="Sprite2D" parent="Obr6"]
+position = Vector2(647.5, 348.25)
+scale = Vector2(0.34879035, 0.34763402)
+texture = ExtResource("3_xtvdw")
+
+[node name="Label" type="Label" parent="Obr6"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "                 ....."
+
+[node name="Obr7" type="Node2D" parent="."]
+visible = false
+
+[node name="ZajimavaBaba" type="Sprite2D" parent="Obr7"]
+position = Vector2(647.5, 348.25)
+scale = Vector2(0.34879035, 0.34763402)
+texture = ExtResource("3_xtvdw")
+
+[node name="Label" type="Label" parent="Obr7"]
+visible = false
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "               odjí ždíme 
+          za 5 minut takže..."
+
+[node name="Obr8" type="Node2D" parent="."]
+visible = false
+
+[node name="BabaKlič" type="Sprite2D" parent="Obr8"]
+position = Vector2(645.24994, 356.00003)
+scale = Vector2(0.34415317, 0.35404792)
+texture = ExtResource("1_2q4il")
+
+[node name="Label" type="Label" parent="Obr8"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "               tady máš 
+                   klíče"
+
+[node name="Obr9" type="Node2D" parent="."]
+
+[node name="BabaKlič" type="Sprite2D" parent="Obr9"]
+position = Vector2(645.24994, 356.00003)
+scale = Vector2(0.34415317, 0.35404792)
+texture = ExtResource("1_2q4il")
+
+[node name="Label" type="Label" parent="Obr9"]
+offset_left = 356.0
+offset_top = 517.0
+offset_right = 822.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "               tady máš 
+                   klíče"
+
+[node name="BabaRuka" type="Sprite2D" parent="Obr9"]
+position = Vector2(642, 353.00003)
+scale = Vector2(0.35806453, 0.3671608)
+texture = ExtResource("5_h8sat")
+
+[node name="ButtonPrijmout" type="Button" parent="Obr9"]
+offset_left = 625.0
+offset_top = 556.0
+offset_right = 799.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 35
+text = "přijmout"
+
+[node name="Button2" type="Button" parent="Obr9"]
+offset_left = 366.0
+offset_top = 556.0
+offset_right = 540.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 35
+text = "odmítnout"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="Obr9/ButtonPrijmout" to="." method="_on_button_prijmout_pressed"]
