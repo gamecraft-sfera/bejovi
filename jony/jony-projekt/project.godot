@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="jony_projekt"
-run/main_scene="uid://4faa3vb4kgmr"
+run/main_scene="uid://dwvtd6m601yvr"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Keys="*res://g_keys.gd"
+Global="*res://global.gd"
 
 [input]
 
