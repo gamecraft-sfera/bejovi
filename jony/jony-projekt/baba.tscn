@@ -1,0 +1,325 @@
+[gd_scene load_steps=10 format=3 uid="uid://dc07djan4rgyd"]
+
+[ext_resource type="Texture2D" uid="uid://bjh574effw8qx" path="res://babi/baba.png" id="1_j2qe8"]
+[ext_resource type="Texture2D" uid="uid://cnrkwudettk1u" path="res://babi/smutna baba.png" id="2_rmarr"]
+[ext_resource type="Texture2D" uid="uid://dccpnv2byqm63" path="res://babi/zajimava baba.png" id="3_kika1"]
+[ext_resource type="Texture2D" uid="uid://dpwv7elulbosq" path="res://babi/baba klič.png" id="4_pnmya"]
+
+[sub_resource type="Animation" id="Animation_ni32x"]
+resource_name = "jak_se_mas"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JakSeMas:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UzSesRozhodla:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BabiDobre:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.97, 6.071053, 10.0135355),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["docela dobře akorat že
+", " (od dechnutí) už  jsem se rozhodla
+ půjdu do důchodu .", "moh bis mně tam od vízt prosím", "a eště mohl bis mi pohlídat
+ kočku a dům"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BabiDobre:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Baba:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.0170171, 6.0895624, 10.106082),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_j2qe8"), ExtResource("2_rmarr"), ExtResource("3_kika1"), ExtResource("4_pnmya")]
+}
+
+[sub_resource type="Animation" id="Animation_kjqne"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JakSeMas:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UzSesRozhodla:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BabiDobre:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["docela dobře akorat že
+"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BabiDobre:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Baba:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_j2qe8")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Baba:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_w0tau"]
+resource_name = "UzSesRozhodla"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JakSeMas:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UzSesRozhodla:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BabiDobre:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.0355265, 5.997016),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Jo už jo půjdu tam
+", "mohl bis mně tam odvízt prosím
+", "a pohlídat mi dům a kočku prosím
+"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Baba:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.0355265, 5.997016),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_rmarr"), ExtResource("3_kika1"), ExtResource("4_pnmya")]
+}
+
+[sub_resource type="Animation" id="Animation_abc7b"]
+resource_name = "ano_ne"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baba:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j20l2"]
+_data = {
+&"RESET": SubResource("Animation_kjqne"),
+&"UzSesRozhodla": SubResource("Animation_w0tau"),
+&"ano_ne": SubResource("Animation_abc7b"),
+&"jak_se_mas": SubResource("Animation_ni32x")
+}
+
+[node name="Baba" type="Node2D"]
+
+[node name="Baba" type="Sprite2D" parent="."]
+position = Vector2(340, 312)
+scale = Vector2(0.3171371, 0.31713706)
+texture = ExtResource("1_j2qe8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 51.0
+offset_top = 560.0
+offset_right = 504.0
+offset_bottom = 641.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 263.0
+offset_top = 498.0
+offset_right = 273.0
+offset_bottom = 583.0
+
+[node name="JakSeMas" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 514.0
+offset_right = 286.0
+offset_bottom = 583.0
+pivot_offset = Vector2(3, 9)
+theme_override_font_sizes/font_size = 35
+text = "jakse maš?"
+
+[node name="UzSesRozhodla" type="Label" parent="."]
+offset_left = 283.0
+offset_top = 518.0
+offset_right = 519.0
+offset_bottom = 587.0
+pivot_offset = Vector2(3, 9)
+theme_override_font_sizes/font_size = 30
+text = "už ses rozhodla?"
+
+[node name="BabiDobre" type="Label" parent="."]
+offset_left = 59.0
+offset_top = 568.0
+offset_right = 589.0
+offset_bottom = 641.0
+pivot_offset = Vector2(3, 9)
+theme_override_font_sizes/font_size = 25
+text = "docela dobře akorat že
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_j20l2")
+}
+
+[node name="ano" type="Button" parent="."]
+offset_left = 108.0
+offset_top = 558.0
+offset_right = 180.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 35
+text = "ano"
+flat = true
