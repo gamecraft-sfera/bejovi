@@ -1,11 +1,18 @@
 extends Node3D
 
+var _psycho: float = 0
+var _prisery: int = 0
 
 func _ready() -> void:
 	_update_game_state()
 	
 	if Global.game_state == Global.GameState.START:
 		%TelefonButton.visible = true
+
+func _input(event: InputEvent) -> void:
+	pass
+	#if event.is_pressed():
+	#	_sleep_anim()
 
 func _update_game_state() -> void:
 	%QuestLabel.text = Global.get_quest_desc()
@@ -34,6 +41,26 @@ func _on_close_button_pressed() -> void:
 	if Global.game_state == Global.GameState.SMS_PILULKA1:
 		await _hide_telefon()
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_1
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.RANO2:
+		await _hide_telefon()
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_2
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.RANO3:
+		await _hide_telefon()
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_3
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.RANO4:
+		await _hide_telefon()
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_4
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.RANO5:
+		await _hide_telefon()
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_5
 		_show_vem_si_pilulku()
 		
 	_update_game_state()
@@ -66,32 +93,60 @@ func _on_vem_pilulku_button_pressed() -> void:
 	%Ruka.play("default")
 	await get_tree().create_timer(1.0).timeout
 	%Ruka.stop()
-	_lower_psycho()
+	_increase_psycho()
 	_hide_vem_si_pilulku()
 	_move_state()
 
 
 func _on_neber_pilulku_button_pressed() -> void:
 	_hide_vem_si_pilulku()
-	_increase_psycho()
+	#_increase_psycho()
+	_prisery += 1
 	_move_state()
 	
 func _move_state():
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_1:
-		Global.game_state = Global.GameState.VEM_SI_PILULKU_1
-		_show_vem_si_pilulku()
+		Global.game_state = Global.GameState.SPAT1
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_2:
+		Global.game_state = Global.GameState.SPAT2
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3:
+		Global.game_state = Global.GameState.SPAT3
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_4:
+		Global.game_state = Global.GameState.SPAT4
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5:
+		Global.game_state = Global.GameState.SPAT5
+		
+		
+	if Global.game_state == Global.GameState.RANO2:
+		%TelefonButton.visible = true
+	if Global.game_state == Global.GameState.RANO3:
+		%TelefonButton.visible = true
+	if Global.game_state == Global.GameState.RANO4:
+		%TelefonButton.visible = true
+	if Global.game_state == Global.GameState.RANO5:
+		%TelefonButton.visible = true
+		
 		
 	_update_game_state()
 
-var _psycho: float = 0
-
 func _increase_psycho():
 	_psycho += 0.1
-	_set_psycho()
+	#_set_psycho()
 	
 func _lower_psycho():
 	_psycho = max(0, _psycho - 0.1)
-	_set_psycho()
+	#_set_psycho()
+	
+func _set_prisery():
+	$Priserky1.visible = _prisery > 0
+	$Priserky2.visible = _prisery > 1
+	$Priserky3.visible = _prisery > 2
+	$Priserky4.visible = _prisery > 3
+	$Priserky5.visible = _prisery > 4
 	
 func _set_psycho():
 	$CanvasLayer3/EffectDuha.visible = _psycho > 0
@@ -100,3 +155,61 @@ func _set_psycho():
 	($CanvasLayer3/EffectDuha.material as ShaderMaterial).set_shader_parameter("pruhlednost", _psycho)
 	($CanvasLayer4/EffectEye.material as ShaderMaterial).set_shader_parameter("open_amount", 1 - _psycho)
 	
+
+func _sleep():
+	if Global.game_state == Global.GameState.SPAT1:
+		await _sleep_anim()
+		Global.game_state = Global.GameState.RANO2
+		_update_game_state()
+		_set_psycho()
+		_set_prisery()
+		_move_state()
+		
+	if Global.game_state == Global.GameState.SPAT2:
+		await _sleep_anim()
+		Global.game_state = Global.GameState.RANO3
+		_update_game_state()
+		_set_psycho()
+		_set_prisery()
+		_move_state()
+		
+	if Global.game_state == Global.GameState.SPAT3:
+		await _sleep_anim()
+		Global.game_state = Global.GameState.RANO4
+		_update_game_state()
+		_set_psycho()
+		_set_prisery()
+		_move_state()
+		
+	if Global.game_state == Global.GameState.SPAT4:
+		await _sleep_anim()
+		Global.game_state = Global.GameState.RANO5
+		_update_game_state()
+		_set_psycho()
+		_set_prisery()
+		_move_state()
+		
+	if Global.game_state == Global.GameState.SPAT5:
+		await _sleep_anim()
+		Global.game_state = Global.GameState.RANO6
+		_update_game_state()
+		_set_psycho()
+		_set_prisery()
+		_move_state()
+
+func _on_sleep_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		_sleep()
+
+func _sleep_anim() -> void:
+	
+	$CanvasLayer4/EffectEye.visible = true
+	var start: float = ($CanvasLayer4/EffectEye.material as ShaderMaterial).get_shader_parameter("open_amount")
+	var set_open := func(value: float) -> void:
+		($CanvasLayer4/EffectEye.material as ShaderMaterial).set_shader_parameter("open_amount", value)
+		
+	var tween := create_tween()
+	tween.tween_method(set_open, start, 0.0, 0.5)
+	tween.tween_interval(0.7)
+	tween.tween_method(set_open, 0.0, 1.0 - _psycho, 0.5)
+	await tween.finished
