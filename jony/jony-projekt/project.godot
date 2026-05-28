@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Keys="*res://g_keys.gd"
 Global="*res://global.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 ui_left={

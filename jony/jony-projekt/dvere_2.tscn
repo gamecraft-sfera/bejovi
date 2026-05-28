@@ -13,45 +13,6 @@ normal_enabled = true
 normal_texture = ExtResource("2_0u74y")
 uv1_triplanar = true
 
-[sub_resource type="Animation" id="Animation_m8rs0"]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Group:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(4.246603e-15, -1.110223e-16, 0), Vector3(6.233245e-08, 3.9546688e-08, -2.0108635)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Group/klika:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.0753492, -1.0194917, 0.18152408)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Group/klika:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.26, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(2.8090143e-11, -1.5637005e-09, 0.03577928), Vector3(-0.5000185, -0.019556765, 0.04077328), Vector3(0.021384086, 0.00076554896, 0.035787456)]
-}
-
 [sub_resource type="Animation" id="Animation_i5yw0"]
 length = 0.001
 tracks/0/type = "value"
@@ -91,6 +52,45 @@ tracks/2/keys = {
 "values": [Vector3(2.8090143e-11, -1.5637005e-09, 0.03577928)]
 }
 
+[sub_resource type="Animation" id="Animation_m8rs0"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Group:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(4.246603e-15, -1.110223e-16, 0), Vector3(6.233245e-08, 3.9546688e-08, -2.0108635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Group/klika:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0753492, -1.0194917, 0.18152408)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Group/klika:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.26, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(2.8090143e-11, -1.5637005e-09, 0.03577928), Vector3(-0.5000185, -0.019556765, 0.04077328), Vector3(0.021384086, 0.00076554896, 0.035787456)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ietsg"]
 _data = {
 &"RESET": SubResource("Animation_i5yw0"),
@@ -111,7 +111,6 @@ transform = Transform3D(1, -4.7146765e-31, -1.110223e-16, 0, 1, -4.246603e-15, 1
 transform = Transform3D(0.99936205, -0.035771716, -1.5636271e-09, 0.035771716, 0.99936205, -2.7974125e-11, 1.563639e-09, -2.786403e-11, 1, 0.03758149, -0.5790274, -7.864683e-08)
 material_override = SubResource("StandardMaterial3D_2cqfq")
 cast_shadow = 0
-use_collision = true
 size = Vector3(0.32183886, 1.1664646, 2.4666424)
 
 [node name="klika" type="CSGBox3D" parent="Group"]

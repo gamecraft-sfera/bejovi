@@ -35,12 +35,14 @@ func _on_telefon_button_pressed() -> void:
 		
 	if Global.game_state == Global.GameState.RANO4:
 		%SMS7.visible = true
-		# TODO ZOBRAZ KOSTRU KOCKY
+		%cat2.visible = false
+		%bones.visible = true
 		
 	if Global.game_state == Global.GameState.SMS_PILULKA4:
 		%SMS8.visible = true
 		
 	if Global.game_state == Global.GameState.RANO5:
+		%SecretWall.use_collision = false
 		%SMS9.visible = true
 	
 	_show_telefon()
@@ -113,6 +115,10 @@ func _hide_vem_si_pilulku():
 	%Ruka.visible = false
 	%VemPilulkuButton.visible = false
 	%NeberPilulkuButton.visible = false
+	
+	if int(Global.game_state) > int(Global.GameState.VEM_SI_PILULKU_5):
+		_set_psycho()
+		_set_prisery()
 		
 func _krmeni() -> void:
 	if Global.game_state == Global.GameState.NAKRM_KOCKU:
@@ -236,7 +242,7 @@ func _move_state():
 	_update_game_state()
 
 func _increase_psycho():
-	_psycho += 0.1
+	_psycho += 0.2
 	#_set_psycho()
 	
 func _lower_psycho():
@@ -249,6 +255,8 @@ func _set_prisery():
 	$Priserky3.visible = _prisery > 2
 	$Priserky4.visible = _prisery > 3
 	$Priserky5.visible = _prisery > 4
+	if int(Global.game_state) > int(Global.GameState.VEM_SI_PILULKU_5):
+		$Priserky6.visible = _prisery > 5
 	
 func _set_psycho():
 	$CanvasLayer3/EffectDuha.visible = _psycho > 0
@@ -256,6 +264,9 @@ func _set_psycho():
 	
 	($CanvasLayer3/EffectDuha.material as ShaderMaterial).set_shader_parameter("pruhlednost", _psycho)
 	($CanvasLayer4/EffectEye.material as ShaderMaterial).set_shader_parameter("open_amount", 1 - _psycho)
+	
+	if _psycho >= 1.0:
+		%DeathLabel.visible = true
 	
 
 func _sleep():
@@ -312,6 +323,7 @@ func _sleep_anim() -> void:
 
 func _on_kytka_c_zalito() -> void:
 	Global.voda = false
+	%VodaLabel.visible = false
 	Global.game_state = Global.GameState.SMS_PILULKA2
 	_update_game_state()
 	%TelefonButton.visible = true
@@ -324,6 +336,42 @@ func _on_kocka_ve_sklepe() -> void:
 
 func _on_kytka_a_zalito() -> void:
 	Global.voda = false
+	%VodaLabel.visible = false
 	Global.game_state = Global.GameState.SMS_PILULKA4
 	_update_game_state()
 	%TelefonButton.visible = true
+
+
+func _on_well_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		Global.voda = true
+		%VodaLabel.visible = true
+
+
+func _on_bones_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		if Global.game_state == Global.GameState.ODNES_KOCKU and Global.kocka:
+			%cat2.visible = true
+			%KockaLabel.visible = false
+			Global.game_state = Global.GameState.KOCKA_ODNESENA
+			_update_game_state()
+			%TelefonButton.visible = true
+
+
+func _on_cat_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		if Global.game_state == Global.GameState.ODNES_KOCKU and Global.kocka == false:
+			Global.kocka = true
+			%KockaLabel.visible = true
+			$cat.visible = false
+
+
+func _on_kytka_c_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		if Global.game_state == Global.GameState.KYTKAC and Global.voda:
+			_on_kytka_c_zalito()
+
+func _on_kytka_a_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		if Global.game_state == Global.GameState.KYTKAA and Global.voda:
+			_on_kytka_a_zalito()
