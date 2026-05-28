@@ -2187,6 +2187,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 0.00048828125
+offset_bottom = -0.00036621094
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -2266,7 +2268,7 @@ layout_mode = 0
 offset_left = 88.91644
 offset_top = 489.28735
 offset_right = 550.89624
-offset_bottom = 577.46277
+offset_bottom = 605.1256
 color = Color(0.59717613, 0.59717613, 0.5971761, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS2/Babi2"]
@@ -2286,7 +2288,8 @@ offset_right = 456.18085
 offset_bottom = 50.728935
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
-text = "Vem si prášek!"
+text = "Vem si prášek!
+Ať nemáš halušky."
 
 [node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS2"]
 layout_mode = 0
@@ -2312,6 +2315,564 @@ offset_left = 455.2558
 offset_top = 51.674744
 offset_right = 529.5887
 offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS3" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -0.00011797909
+offset_top = 338.87036
+offset_right = 39.99988
+offset_bottom = 378.87036
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS3"]
+layout_mode = 0
+offset_left = 88.91644
+offset_top = 489.28735
+offset_right = 550.89624
+offset_bottom = 605.1256
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS3/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS3/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Zalij kytku C
+ čerstvou vodou ze sklepa."
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS3"]
+layout_mode = 0
+offset_left = 226.15729
+offset_top = 667.36725
+offset_right = 688.13715
+offset_bottom = 750.3559
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS3/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jasně babi"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS3/Ja2"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS4" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -0.00011797909
+offset_top = 646.62
+offset_right = 39.99988
+offset_bottom = 686.62
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS4"]
+layout_mode = 0
+offset_left = 88.91644
+offset_top = 489.28735
+offset_right = 550.89624
+offset_bottom = 605.1256
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS4/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS4/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jestli jsi viděl něco divnýho
+vem si dva prášky"
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS4"]
+layout_mode = 0
+offset_left = 226.15729
+offset_top = 667.36725
+offset_right = 688.13715
+offset_bottom = 750.3559
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS4/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jasně babi"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS4/Ja2"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS5" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -0.00011797909
+offset_top = 975.1168
+offset_right = 39.99988
+offset_bottom = 1015.1168
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5"]
+layout_mode = 0
+offset_left = 88.91644
+offset_top = 489.28735
+offset_right = 550.89624
+offset_bottom = 605.1256
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Vem kočku a odnes ji do
+ sklepa."
+
+[node name="Babi3" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5"]
+layout_mode = 0
+offset_left = 88.91662
+offset_top = 786.6634
+offset_right = 550.8964
+offset_bottom = 902.50165
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Babi3"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Babi3"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Dělej!"
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5"]
+layout_mode = 0
+offset_left = 226.15729
+offset_top = 667.36725
+offset_right = 688.13715
+offset_bottom = 750.3559
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "wtf?!"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Ja2"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="Ja3" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5"]
+layout_mode = 0
+offset_left = 226.15741
+offset_top = 949.1828
+offset_right = 688.13727
+offset_bottom = 1032.1714
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Ja3"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Tak jo babi"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS5/Ja3"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS6" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -0.00012207031
+offset_top = 1573.3267
+offset_right = 39.999878
+offset_bottom = 1613.3267
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6"]
+layout_mode = 0
+offset_left = 88.91644
+offset_top = 489.28735
+offset_right = 550.89624
+offset_bottom = 605.1256
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Vem si tři prášky!"
+
+[node name="Babi3" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6"]
+layout_mode = 0
+offset_left = 88.91662
+offset_top = 819.51306
+offset_right = 550.8964
+offset_bottom = 935.3513
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Babi3"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Babi3"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Protože odmlouváš."
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6"]
+layout_mode = 0
+offset_left = 226.15729
+offset_top = 667.36725
+offset_right = 688.13715
+offset_bottom = 750.3559
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Proč tři?"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Ja2"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="Ja3" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6"]
+layout_mode = 0
+offset_left = 226.15741
+offset_top = 1004.5087
+offset_right = 688.13727
+offset_bottom = 1087.4973
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Ja3"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jasně babi"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS6/Ja3"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS7" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -3.866061
+offset_top = 2247.6094
+offset_right = 36.133938
+offset_bottom = 2287.6094
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS7"]
+layout_mode = 0
+offset_left = 88.91644
+offset_top = 489.28735
+offset_right = 550.89624
+offset_bottom = 605.1256
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS7/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS7/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Zalij kytku A
+ vodou ze sklepa."
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS7"]
+layout_mode = 0
+offset_left = 226.15729
+offset_top = 667.36725
+offset_right = 688.13715
+offset_bottom = 750.3559
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS7/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jasně babi"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS7/Ja2"]
+layout_mode = 0
+offset_left = 455.2558
+offset_top = 51.674744
+offset_right = 529.5887
+offset_bottom = 81.92688
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS8" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -3.866061
+offset_top = 2581.2932
+offset_right = 36.133938
+offset_bottom = 2621.2932
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS8"]
+layout_mode = 0
+offset_left = 88.91662
+offset_top = 684.6565
+offset_right = 550.8964
+offset_bottom = 800.49475
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS8/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS8/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Tak to máš halušky.
+Vem si čtyři prášky!"
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS8"]
+layout_mode = 0
+offset_left = 226.15741
+offset_top = 484.10062
+offset_right = 688.13727
+offset_bottom = 594.75195
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS8/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Babi ve sklepě jsou
+kosti a není tu kočka"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS8/Ja2"]
+layout_mode = 0
+offset_left = 458.11374
+offset_top = 82.9886
+offset_right = 532.44666
+offset_bottom = 113.24074
+rotation = 0.18523197
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SMS9" type="Control" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = -3.866061
+offset_top = 2973.7605
+offset_right = 36.133938
+offset_bottom = 3013.7605
+
+[node name="Babi2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS9"]
+layout_mode = 0
+offset_left = 88.91662
+offset_top = 684.6565
+offset_right = 597.2876
+offset_bottom = 840.25977
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS9/Babi2"]
+layout_mode = 0
+offset_left = -59.8208
+offset_top = 68.88498
+offset_right = 9.766113
+offset_bottom = 98.11789
+rotation = -0.19872072
+color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS9/Babi2"]
+layout_mode = 0
+offset_left = 11.597834
+offset_top = 1.7289352
+offset_right = 456.18085
+offset_bottom = 50.728935
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Toho si nevšímej.
+Hladně nehledej tajný dveře.
+A vem si 10 prášků!"
+
+[node name="Ja2" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS9"]
+layout_mode = 0
+offset_left = 226.15741
+offset_top = 484.10062
+offset_right = 688.13727
+offset_bottom = 594.75195
+color = Color(0.36723098, 0.752674, 0.49871457, 1)
+
+[node name="SmSTextLabel" type="Label" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS9/Ja2"]
+layout_mode = 0
+offset_left = 28.994556
+offset_top = 1.7289362
+offset_right = 204.89476
+offset_bottom = 65.69933
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Babi slyším v baráku
+divný zvuky! Co to je?!"
+
+[node name="ColorRect7" type="ColorRect" parent="TelefonCanvas/Telefon/PozadíPhone/SmSText/SmSText2/ScrollContainer/Control/SMS9/Ja2"]
+layout_mode = 0
+offset_left = 458.11374
+offset_top = 82.9886
+offset_right = 532.44666
+offset_bottom = 113.24074
 rotation = 0.18523197
 color = Color(0.36723098, 0.752674, 0.49871457, 1)
 

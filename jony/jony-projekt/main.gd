@@ -20,6 +20,22 @@ func _update_game_state() -> void:
 func _on_telefon_button_pressed() -> void:
 	if Global.game_state == Global.GameState.SMS_PILULKA1:
 		%SMS2.visible = true
+		
+	if Global.game_state == Global.GameState.RANO2:
+		%SMS3.visible = true
+		
+	if Global.game_state == Global.GameState.SMS_PILULKA2:
+		%SMS4.visible = true
+		
+	if Global.game_state == Global.GameState.RANO3:
+		%SMS5.visible = true
+		
+	if Global.game_state == Global.GameState.KOCKA_ODNESENA:
+		%SMS6.visible = true
+		
+	if Global.game_state == Global.GameState.RANO4:
+		%SMS7.visible = true
+		# TODO ZOBRAZ KOSTRU KOCKY
 	
 	_show_telefon()
 
@@ -45,18 +61,31 @@ func _on_close_button_pressed() -> void:
 		
 	if Global.game_state == Global.GameState.RANO2:
 		await _hide_telefon()
+		Global.game_state = Global.GameState.KYTKAC
+		
+	if Global.game_state == Global.GameState.SMS_PILULKA2:
+		await _hide_telefon()
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_2
 		_show_vem_si_pilulku()
 		
+		
 	if Global.game_state == Global.GameState.RANO3:
+		await _hide_telefon()
+		Global.game_state = Global.GameState.ODNES_KOCKU
+		
+		
+	if Global.game_state == Global.GameState.KOCKA_ODNESENA:
 		await _hide_telefon()
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_3
 		_show_vem_si_pilulku()
 		
+		
 	if Global.game_state == Global.GameState.RANO4:
 		await _hide_telefon()
-		Global.game_state = Global.GameState.VEM_SI_PILULKU_4
-		_show_vem_si_pilulku()
+		Global.game_state = Global.GameState.KYTKAA
+		
+		
+		
 		
 	if Global.game_state == Global.GameState.RANO5:
 		await _hide_telefon()
@@ -109,10 +138,23 @@ func _move_state():
 		Global.game_state = Global.GameState.SPAT1
 		
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_2:
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_2_2
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_2_2:
 		Global.game_state = Global.GameState.SPAT2
 		
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3:
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_3_2
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3_2:
+		Global.game_state = Global.GameState.VEM_SI_PILULKU_3_3
+		_show_vem_si_pilulku()
+		
+	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3_3:
 		Global.game_state = Global.GameState.SPAT3
+		
 		
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_4:
 		Global.game_state = Global.GameState.SPAT4
@@ -213,3 +255,22 @@ func _sleep_anim() -> void:
 	tween.tween_interval(0.7)
 	tween.tween_method(set_open, 0.0, 1.0 - _psycho, 0.5)
 	await tween.finished
+
+
+func _on_kytka_c_zalito() -> void:
+	Global.voda = false
+	Global.game_state = Global.GameState.SMS_PILULKA2
+	_update_game_state()
+	%TelefonButton.visible = true
+	
+func _on_kocka_ve_sklepe() -> void:
+	Global.kocka = false
+	Global.game_state = Global.GameState.KOCKA_ODNESENA
+	_update_game_state()
+	%TelefonButton.visible = true
+
+func _on_kytka_a_zalito() -> void:
+	Global.voda = false
+	Global.game_state = Global.GameState.SMS_PILULKA4
+	_update_game_state()
+	%TelefonButton.visible = true
