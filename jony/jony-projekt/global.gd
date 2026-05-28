@@ -5,8 +5,9 @@ VEM_SI_PILULKU_2, VEM_SI_PILULKU_2_2, SPAT2, RANO3,
 ODNES_KOCKU, KOCKA_ODNESENA,
 VEM_SI_PILULKU_3, VEM_SI_PILULKU_3_2, VEM_SI_PILULKU_3_3, SPAT3, RANO4,
 KYTKAA, SMS_PILULKA4,
-VEM_SI_PILULKU_4, SPAT4, RANO5,
-VEM_SI_PILULKU_5, SPAT5, RANO6}
+VEM_SI_PILULKU_4, VEM_SI_PILULKU_4_2, VEM_SI_PILULKU_4_3, VEM_SI_PILULKU_4_4, SPAT4, RANO5,
+VEM_SI_PILULKU_5, VEM_SI_PILULKU_5_2, VEM_SI_PILULKU_5_3, VEM_SI_PILULKU_5_4, VEM_SI_PILULKU_5_5, VEM_SI_PILULKU_5_6, VEM_SI_PILULKU_5_7,
+VEM_SI_PILULKU_5_8,VEM_SI_PILULKU_5_9, VEM_SI_PILULKU_5_10, NEHLEDEJ}
 
 var game_state: GameState = GameState.START
 
@@ -56,9 +57,7 @@ func get_quest_desc() -> String:
 			return "Přečti si zprávu"
 		GameState.VEM_SI_PILULKU_5:
 			return "Vem si pilulku (nebo ne?)"
-		GameState.SPAT5:
-			return "Běž spát"
-		GameState.RANO6:
-			return "KONEC"
+		GameState.NEHLEDEJ:
+			return "Nehledej tajnou místnost"
 			
 	return ""
