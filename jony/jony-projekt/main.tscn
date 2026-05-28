@@ -1898,6 +1898,7 @@ key_color = 2
 
 [node name="Dvere5" parent="." instance=ExtResource("21_ok6jj")]
 transform = Transform3D(0.033783156, -0.9994291, -4.3686438e-08, 0, -4.3711385e-08, 1, -0.9994291, -0.033783156, -1.4767089e-09, -1.5665889, 5.076909, -1.216784)
+visible = false
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8909585, 3.7838752, -2.7224135)

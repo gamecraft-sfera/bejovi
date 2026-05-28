@@ -116,7 +116,7 @@ func _hide_vem_si_pilulku():
 	%VemPilulkuButton.visible = false
 	%NeberPilulkuButton.visible = false
 	
-	if int(Global.game_state) > int(Global.GameState.VEM_SI_PILULKU_5):
+	if int(Global.game_state) >= int(Global.GameState.VEM_SI_PILULKU_5):
 		_set_psycho()
 		_set_prisery()
 		
@@ -163,28 +163,23 @@ func _move_state():
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_3_2
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3_2:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_3_2:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_3_3
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_3_3:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_3_3:
 		Global.game_state = Global.GameState.SPAT3
 		
 		
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_4:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_4_2
-		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_4_2:
+		_show_vem_si_pilulku()	
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_4_2:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_4_3
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_4_3:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_4_3:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_4_4
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_4_4:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_4_4:
 		Global.game_state = Global.GameState.SPAT4
 		
 		
@@ -193,40 +188,31 @@ func _move_state():
 	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_2
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_2:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_2:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_3
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_3:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_3:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_4
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_4:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_4:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_5
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_5:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_5:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_6
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_6:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_6:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_7
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_7:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_7:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_8
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_8:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_8:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_9
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_9:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_9:
 		Global.game_state = Global.GameState.VEM_SI_PILULKU_5_10
 		_show_vem_si_pilulku()
-		
-	if Global.game_state == Global.GameState.VEM_SI_PILULKU_5_10:
+	elif Global.game_state == Global.GameState.VEM_SI_PILULKU_5_10:
 		Global.game_state = Global.GameState.NEHLEDEJ
 		
 	if Global.game_state == Global.GameState.RANO2:
@@ -242,7 +228,7 @@ func _move_state():
 	_update_game_state()
 
 func _increase_psycho():
-	_psycho += 0.2
+	_psycho += 0.15
 	#_set_psycho()
 	
 func _lower_psycho():
